@@ -1,0 +1,184 @@
+<html> 
+  <head>
+    <title>About</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body> 
+    
+    <!-- /nav bar -->
+    <div id="nav-placeholder"></div>
+    <script>
+      $.get("/reusable/headernav.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+
+    <h1>About</h1> 
+
+    <body>
+      <!-- introduction -->
+      <div class="about-introduction-container">
+        <img src="/media/about-photo.jpeg" alt="about photo" width="250" height="250" class="img-rounded">
+        <div class="about-introduction-text-container">
+          <h4 style="position:relative; top: 40px;">Hello! My name is Wemi Oshun-Williams and I'm currently studying Computer Science
+            at Cornell University in the College of Engineering with a minor in Africana Studies.
+            After graduation I'll be taking up a role at Lloyd's Banking Group as a Software Engineer.
+          </h4>
+
+        </div>
+      </div>
+
+      <!-- skills section -->
+      <div class="skills-container">
+        <p>Skills</p>
+
+        <p>Python</p>
+        <div class="skills-bar">
+          <div class="skills python">85%</div>
+        </div>
+
+        <p>Java</p>
+        <div class="skills-bar">
+          <div class="skills java">70%</div>
+        </div>
+
+        <p>C++</p>
+        <div class="skills-bar">
+          <div class="skills cpp">70%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="skills-bar">
+          <div class="skills javascript">60%</div>
+        </div>
+      </div>
+
+      <!-- education -->
+      
+      <div class="education-container">
+        <p>Education</p>
+        <!-- flip card 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Degree Information</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <small> BSc Computer Science</small>
+              <p></p>
+              <small> Cornell University, College of Engineering</small>
+              <p></p>
+              <small> Dean's List Fall 2021</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 2 -->
+        <div class="flip-card" style="position: relative; top: -200; left: 400">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Relevant Courses</p>
+            </div>
+            <div class="flip-card-back">
+              <small>Introduction to Analysis of Algorithms</small>
+              <p></p>
+              <small>Discrete Structures</small>
+              <p></p>
+              <small>Object-Oriented Programming and Data Structures</small>
+              <p></p>
+              <small>Probability and Statistics</small>
+              <p></p>
+              <small>Data Structures and Functional Programming</small>
+              <p></p>
+              <small>Computer System Organization and Programming</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 3 -->
+        <div class="flip-card" style="position: relative; top: -400; left: 800">
+
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Extracurriculars</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <small>Hunter R. III Rawlings Scholar</small>
+              <p></p>
+              <small>Robots in Groups Lab</small>
+              <p></p>
+              <small>Model for Afrik: The Fashion Show</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- experience -->
+      <div class="experiences-container">
+        <p>Experiences</p>
+
+        <div class="experiences-sub-container">
+          <h2>Technical Architect Intern @ Zwift</h2>
+          <h3>London, UK</h3>
+          <ul>
+            <li>Facilitated in ERP (Oracle NetSuite) integrations with 3PLs and contract manufacturers</li>
+            <li>Took charge of cross-functional company systems inventory</li>
+            <li>Carefully crafted NetSuite process workflows and user acceptance testing (UAT) planning</li>
+          </ul>
+
+        </div>
+
+        <p></p>
+
+        <div class="experiences-sub-container">
+          <h2>Backend Engineer Intern @ Avoy</h2>
+          <h3>London, UK</h3>
+          <ul>
+            <li>Worked with Django REST framework to smash weekly web-development targets, implementing five or more backend features a week such as photo location tagging, pagination, notifications, and file deletion through API algorithmic development</li>
+          </ul>
+        </div>
+
+        <p></p>
+
+        <div class="experiences-sub-container">
+          <h2>Hardware Technician Intern @ Micro Technique</h2>
+          <h3>Rouen, France</h3>
+          <ul>
+            <li>Strengthened hardware repair team and streamlined processes for more efficient hardware installation</li>
+          </ul>
+          
+        </div>
+
+        <p></p>
+
+        <div class="experiences-sub-container">
+          <h2>Undergraduate Researcher @ Robots in Groups</h2>
+          <h3>Ithaca, New York</h3>
+          <ul>
+            <li>Integrated artificial intelligence knowledge with current practices of survey conduction and data analysis to conduct investigations on the effect of robotic presence in human behavior in a team setting</li>
+          </ul>
+          
+        </div>
+
+      </div>
+
+    </body>
+    
+
+
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $.get("/reusable/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+
+  </body>
+</html>

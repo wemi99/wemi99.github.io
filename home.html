@@ -1,0 +1,39 @@
+<html> 
+  <head>
+    <title>Home</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+  <!-- /Users/WemiOshun-Williams1/3025/home.html -->
+  <body> 
+    
+    <!-- /nav bar -->
+    <div id="nav-placeholder"></div>
+    <script>
+      $.get("/reusable/headernav.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+    </script> 
+
+    <!-- name for homepage -->
+    <h1>Wemi Oshun-Williams</h1> 
+
+    <!-- quick little intro -->
+    <small class="home-small-text"> 
+      Hello World! My name is Wemi Oshun-Williams and I'm a Software Engineer who's just graduated from Cornell University.
+    </small>
+
+    <!-- inserting photo -->
+    <img src="/media/home-photo.png" alt="home photo" width="500" height="600">
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+      $.get("/reusable/footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      });
+    </script>
+
+  </body>
+</html>

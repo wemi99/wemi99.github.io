@@ -1,0 +1,66 @@
+<html> 
+  <head>
+    <title>Contact</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body> 
+    
+    <!-- /NAVIGATION BAR -->
+    <div id="nav-placeholder"></div>
+    <script>
+    $.get("/reusable/headernav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+    </script> 
+
+    <h1>Contact Me</h1> 
+
+    <!-- inserting social media logos -->
+    <div id="logo-container">
+        <a href = "https://www.github.com/wemi99/" target = "_self">
+            <img id="github" src="/media/github-logo.png" alt="github">
+        </a>
+
+        <a href = "https://www.instagram.com/black.girl.codes/" target = "_self">
+            <img id="instagram" src="/media/instagram-logo.png" alt="instagram">
+        </a>
+
+        <a href = "https://www.linkedin.com/in/wemi-oshun-williams-a15a8b192/" target = "_self">
+            <img id="linkedin" src="/media/linkedin-logo.png" alt="linkedin">
+        </a>
+    </div>
+
+    <!-- contact text boxes -->
+    <div class="contact-container">
+
+        <!-- <form action="action_page.php"></form> -->
+
+        <label for="first-name">Name</label>
+        <input type="text" id="first-name" name="firstname" placeholder="Your name...">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email...">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Your subject...">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Hello..." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </div>
+
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $.get("/reusable/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+
+  </body>
+</html>

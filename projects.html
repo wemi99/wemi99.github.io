@@ -1,0 +1,137 @@
+<html> 
+  <head>
+    <title>Projects</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body> 
+    
+    <!-- /nav bar -->
+    <div id="nav-placeholder"></div>
+    <script>
+      $.get("/reusable/headernav.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+
+    <h1>My Projects</h1> 
+
+    <body>
+
+      <!-- projects introduction -->
+      <div class="projects-introduction-container">
+        <div class="projects-introduction-sub-container">
+
+          <p style="position:relative; top:20px;">
+            Welcome to my project page! After studying Computer Science at Cornell University for four years,
+            I've become increasingly interested by new technologies such as Artificial Intelligence and Natural Language processing.
+            However, I also have realised the power of using technology to help others and work towards a more sustainable future. 
+            Thus, in the future, I would love to use my degree to work towards a more equitable future as we face climate change
+            and also empowering underrepresented minorities in the tech industry.
+          </p>
+        </div>
+      </div>
+
+      <div class="education-container">
+        <p>For technology</p>
+        <!-- flip card 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Planet Particle System</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="https://github.com/wemi99/Planet-Particle-System" target=_blank class="project-check-it-out"> Check it out!</a>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 2 -->
+        <div class="flip-card" style="position: relative; top: -200; left: 400">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Terminal Messaging System Prototype</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="https://github.com/wemi99/Terminal-Messaging-System-Prototype" target=_blank class="project-check-it-out"> Check it out!</a>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 3 -->
+        <div class="flip-card" style="position: relative; top: -400; left: 800">
+
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>N Gram Map Reduce</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="https://github.com/wemi99/N-Gram-Map-Reduce" target=_blank class="project-check-it-out"> Check it out!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p></p>
+
+      <div class="education-container">
+        <p>For people</p>
+        <!-- flip card 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Sustainable Sustenance</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="sustainable-sustenance-v3.herokuapp.com/" target=_blank class="project-check-it-out"> Check it out!</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 2 -->
+        <div class="flip-card" style="position: relative; top: -200; left: 400">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>San Francisco Traffic Light Simulator</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="https://github.com/wemi99/San-Francisco-Traffic-Light-Simulator" target=_blank class="project-check-it-out"> Check it out!</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 3 -->
+        <div class="flip-card" style="position: relative; top: -400; left: 800">
+
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p>Ray Tracer Snap Game</p>
+            </div>
+            <div class="flip-card-back">
+              <p></p>
+              <a href="https://github.com/wemi99/Ray-Tracer-Snap-Game" target=_blank class="project-check-it-out"> Check it out!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $.get("/reusable/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+
+  </body>
+</html>
