@@ -2,38 +2,73 @@
   <head>
     <title>Home</title> 
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Marvel' rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
-  <!-- /Users/WemiOshun-Williams1/3025/home.html -->
-  <body> 
-    
-    <!-- /nav bar -->
-    <div id="nav-placeholder"></div>
+  <!-- <body class="home-body"> -->
+  <body>
+
+    <!-- NEW NAV BAR -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="background.html">Background</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="media/resume.pdf" target=_blank>Resume</a>
+    </div>
+
+    <!-- to open side nav -->
+    <div class="menu-button" onclick="openNav()">
+      <div class="menu-b1"></div>
+      <div class="menu-b2"></div>
+      <div class="menu-b3"></div>
+    </div>
+
+
     <script>
-      $.get("/reusable/headernav.html", function(data){
-          $("#nav-placeholder").replaceWith(data);
-      });
-    </script> 
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
 
-    <!-- name for homepage -->
-    <h1>Wemi Oshun-Williams</h1> 
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
 
-    <!-- quick little intro -->
-    <small class="home-small-text"> 
-      Hello World! My name is Wemi Oshun-Williams and I'm a Software Engineer who's just graduated from Cornell University.
-    </small>
+    <!-- <div id="main">
+      <div class="home-container">
+        <img src="/media/about-photo.jpeg" alt="homePhoto" style="width:100%; height:100%;">
+      </div>
+    </div> -->
 
-    <!-- inserting photo -->
-    <img src="/media/home-photo.png" alt="home photo" width="500" height="600">
+    <div id="main">
+      
+      <div style="text-align: center;">
+        <h1 style="font-size:xx-large;">Wemi Oshun-Williams</h1>
+        <img src="media/about-photo.jpeg" style="height: 60%; width: 30%;">
+      </div>
+      
+      <p style="position: absolute; bottom:40px; right:40px; font-size:x-large;">Cornell University Graduating Class of 2022</p>
+      <p style="position: absolute; bottom: 40px; left: 40px; font-size: x-large;">Software Engineer</p>
+
+
+    </div>
+
+
 
     <!-- footer -->
-    <div id="footer-placeholder"></div>
+    <!-- <div id="footer-placeholder"></div>
     <script>
       $.get("/reusable/footer.html", function(data){
           $("#footer-placeholder").replaceWith(data);
       });
-    </script>
+    </script> -->
 
   </body>
 </html>

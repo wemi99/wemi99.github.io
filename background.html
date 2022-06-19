@@ -1,0 +1,216 @@
+<html> 
+  <head>
+    <title>About</title> 
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Marvel' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body> 
+    
+    <!-- NEW NAV BAR -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="background.html">Background</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="media/resume.pdf" target=_blank>Resume</a>
+    </div>
+
+    <!-- to open side nav -->
+    <div class="menu-button" onclick="openNav()">
+      <div class="menu-b1"></div>
+      <div class="menu-b2"></div>
+      <div class="menu-b3"></div>
+    </div>
+
+    <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <h1>Background</h1> 
+
+    <div id="main">
+    <body>
+      <!-- introduction -->
+      <div class="about-introduction-container">
+        <div class="about-introduction-text-container">
+          <p style="font-size: large;">Hi! My name is Wemi Oshun-Williams and I'm currently studying Computer Science
+            at Cornell University in the College of Engineering with a minor in Africana Studies.
+            After graduation I'll be working at Lloyd's Banking Group as a Software Engineer. 
+          </p>
+        </div>
+      </div>
+
+      <!-- skills section -->
+      <!-- https://morioh.com/p/3fc4334d9ead -->
+      <div class="skills-container">
+        <h3 class="heading-text-formatting">SKILLS</h3>
+        <div class="skills-sub-container">
+
+          <div class="holder">
+            <div class="bar " data-percent="85%">
+              <span class="label">Python</span>
+            </div>
+          </div>
+
+          <div class="bar" data-percent="70%">
+            <span class="label second">Java</span>
+          </div>
+          <div class="bar" data-percent="70%">
+            <span class="label">C++</span>
+          </div>
+          <div class="bar" data-percent="65%">
+            <span class="label second">JavaScript</span>
+          </div>
+          <div class="bar" data-percent="60%">
+            <span class="label">OCaml</span>
+          </div>
+          <div class="bar" data-percent="60%">
+            <span class="label second">Visual Basic</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+      <script  src="skills_bar.js"></script>
+
+
+      <!-- education -->
+      <div class="education-container">
+        <h3 class="heading-text-formatting">EDUCATION</h3>
+        <div class="education-sub-container">
+        <!-- flip card 1 -->
+        <div class="p-flip-card">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Degree Information</p>
+            </div>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- BSc Computer Science</p>
+              <br><p class="card-text-formatting">- Cornell University, College of Engineering</p>
+              <br><p class="card-text-formatting">- Dean's List Fall 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 2 -->
+        <div class="p-flip-card" style="position: relative; top: -200; left: 470">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Relevant Courses</p>
+            </div>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Introduction to Analysis of Algorithms</p>
+              <br><p class="card-text-formatting">- Discrete Structures</p>
+              <br><p class="card-text-formatting">- Object-Oriented Programming and Data Structures</p>
+              <br><p class="card-text-formatting">- Probability and Statistics</p>
+              <br><p class="card-text-formatting">- Functional Programming</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- flip card 3 -->
+        <div class="p-flip-card" style="position: relative; top: -400; left: 945">
+
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Extracurriculars</p>
+            </div>
+            <div class="p-flip-card-back">
+              <br><p class="card-text-formatting">- Hunter R. III Rawlings Scholar</p>
+              <br><p class="card-text-formatting">- Robots in Groups Lab</p>
+              <br><p class="card-text-formatting">- Model for Afrik: The Fashion Show</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- experience -->
+      <div class="experiences-container">
+        <h3 class="heading-text-formatting">Experiences Timeline &darr;</h3>
+        <div class="experiences-sub-container">
+        
+        <section class="timeline">
+          <ul>
+
+            <li>
+              <div>
+                <time>2022 ~ Software Engineer @ Lloyd's Banking Group (UK) </time>
+                - Position starting in September 2022
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <time>2021 ~ Technical Architect Intern @ Zwift (USA) </time>
+                - Facilitated in ERP (Oracle NetSuite) integrations with 3PLs and contract manufacturers
+                <br><br>- Took charge of cross-functional company systems inventory
+                <br><br>- Carefully crafted NetSuite process workflows and user acceptance testing (UAT) planning
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <time>2020 ~ Backend Engineer Intern @ Avoy (UK) </time>
+                - Worked with Django REST framework to smash weekly web-development targets
+                <br><br>- Implemented five or more backend features a week such as photo location tagging, pagination, notifications, and file deletion through API algorithmic development
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <time>2019 ~ Undergraduate Researcher @ Robots in Groups (USA) </time>
+                - Integrated artificial intelligence knowledge with current practices of survey conduction and data analysis to conduct investigations on the effect of robotic presence in human behavior in a team setting
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <time>2017 ~ Hardware Technician @ Micro Technique (France) </time>
+                - Strengthened hardware repair team and streamlined processes for more efficient hardware installation
+              </div>
+            </li>
+
+          </ul>
+        </section>
+      </div>
+      </div>
+
+      <script src="timeline.js"></script>
+
+
+
+    </body>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $.get("/reusable/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+
+
+  </div>
+
+
+
+
+
+  </body>
+</html>

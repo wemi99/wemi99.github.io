@@ -2,28 +2,55 @@
   <head>
     <title>Projects</title> 
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Marvel' rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body> 
     
-    <!-- /nav bar -->
-    <div id="nav-placeholder"></div>
+    <!-- NEW NAV BAR -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="background.html">Background</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="media/resume.pdf" target=_blank>Resume</a>
+    </div>
+
+    <!-- to open side nav -->
+    <div class="menu-button" onclick="openNav()">
+      <div class="menu-b1"></div>
+      <div class="menu-b2"></div>
+      <div class="menu-b3"></div>
+    </div>
+
     <script>
-      $.get("/reusable/headernav.html", function(data){
-          $("#nav-placeholder").replaceWith(data);
-      });
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
     </script>
 
     <h1>My Projects</h1> 
 
+    <div id="main">
+
+    
     <body>
 
       <!-- projects introduction -->
       <div class="projects-introduction-container">
         <div class="projects-introduction-sub-container">
 
-          <p style="position:relative; top:20px;">
+          <p style="font-size:x-large;">
             Welcome to my project page! After studying Computer Science at Cornell University for four years,
             I've become increasingly interested by new technologies such as Artificial Intelligence and Natural Language processing.
             However, I also have realised the power of using technology to help others and work towards a more sustainable future. 
@@ -33,16 +60,19 @@
         </div>
       </div>
 
-      <div class="education-container">
-        <p>For technology</p>
+      <div class="projects-container">
+        <h3 class="heading-text-formatting">FOR TECHNOLOGICAL APPLICATION</h3>
+        <div class="projects-sub-container">
         <!-- flip card 1 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>Planet Particle System</p>
+        <div class="p-flip-card">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Planet Particle System</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Languages: TypeScript, JavaScript</p>
+              <br><p class="card-text-formatting">- System that simulates orbiting planets</p>
+              <br><p class="card-text-formatting">- GUI parameters allow users to add and alter planets with collision detection</p>
               <a href="https://github.com/wemi99/Planet-Particle-System" target=_blank class="project-check-it-out"> Check it out!</a>
               <p></p>
             </div>
@@ -50,13 +80,14 @@
         </div>
 
         <!-- flip card 2 -->
-        <div class="flip-card" style="position: relative; top: -200; left: 400">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>Terminal Messaging System Prototype</p>
+        <div class="p-flip-card" style="position: relative; top: -200; left: 470">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Terminal Messaging System Prototype</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Language: OCaml</p>
+              <br><p class="card-text-formatting">- Instant messaging service on systems with shared file systems that provides users with the means to have one-to-one conversations through their terminals </p>
               <a href="https://github.com/wemi99/Terminal-Messaging-System-Prototype" target=_blank class="project-check-it-out"> Check it out!</a>
               <p></p>
             </div>
@@ -64,66 +95,77 @@
         </div>
 
         <!-- flip card 3 -->
-        <div class="flip-card" style="position: relative; top: -400; left: 800">
+        <div class="p-flip-card" style="position: relative; top: -400; left: 945">
 
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>N Gram Map Reduce</p>
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">N Gram Map Reduce</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Language: C++</p>
+              <br><p class="card-text-formatting">- Map-Reduce implemented to count the number of n-grams in a directory containing a large number of files</p>
+              <br><p class="card-text-formatting">- Uses threads, promises, and futures to produce top n-grams for each thread</p>
               <a href="https://github.com/wemi99/N-Gram-Map-Reduce" target=_blank class="project-check-it-out"> Check it out!</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
       <p></p>
 
-      <div class="education-container">
-        <p>For people</p>
+      <div class="projects-container" style="top:80px;">
+        <h3 class="heading-text-formatting">FOR PEOPLE</h3>
+        <div class="projects-sub-container">
         <!-- flip card 1 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>Sustainable Sustenance</p>
+        <div class="p-flip-card">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Sustainable Sustenance</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Languages: HTML, CSS, Javascript, Python</p>
+              <br><p class="card-text-formatting">- A querying service using TF-IDF methods and Machine Learning to produce recipes sorted by their carbon footprint</p>
               <a href="sustainable-sustenance-v3.herokuapp.com/" target=_blank class="project-check-it-out"> Check it out!</a>
             </div>
           </div>
         </div>
 
         <!-- flip card 2 -->
-        <div class="flip-card" style="position: relative; top: -200; left: 400">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>San Francisco Traffic Light Simulator</p>
+        <div class="p-flip-card" style="position: relative; top: -200; left: 470">
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">San Francisco Traffic Light Simulator</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Language: C++</p>
+              <br><p class="card-text-formatting">- At a given time t, produces the current traffic light configuration for a busy area in San Francisco</p>
+              <br><p class="card-text-formatting">- Creates kmz file that can be imported in Google Maps</p>
               <a href="https://github.com/wemi99/San-Francisco-Traffic-Light-Simulator" target=_blank class="project-check-it-out"> Check it out!</a>
             </div>
           </div>
         </div>
 
         <!-- flip card 3 -->
-        <div class="flip-card" style="position: relative; top: -400; left: 800">
+        <div class="p-flip-card" style="position: relative; top: -400; left: 945">
 
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <p>Ray Tracer Snap Game</p>
+          <div class="p-flip-card-inner">
+            <div class="p-flip-card-front">
+              <p class="flip-card-front-text">Ray Tracer Snap Game</p>
             </div>
-            <div class="flip-card-back">
-              <p></p>
+            <div class="p-flip-card-back">
+              <p class="card-text-formatting">- Language: Java</p>
+              <br><p class="card-text-formatting">- 2D/3D game where the player character has a camera</p>
+              <br><p class="card-text-formatting">- Modeled a room/scene in 3D space, including walls, light sources, ceilings, floors, monsters, etc.</p>
               <a href="https://github.com/wemi99/Ray-Tracer-Snap-Game" target=_blank class="project-check-it-out"> Check it out!</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
     </body>
+  </div>
 
     <!-- footer -->
     <div id="footer-placeholder"></div>

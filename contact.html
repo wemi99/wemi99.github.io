@@ -2,57 +2,108 @@
   <head>
     <title>Contact</title> 
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Marvel' rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
-  <body> 
+    <body> 
+        
+        <!-- NEW NAV BAR -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="background.html">Background</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="media/resume.pdf" target=_blank>Resume</a>
+          </div>
     
-    <!-- /NAVIGATION BAR -->
-    <div id="nav-placeholder"></div>
-    <script>
-    $.get("/reusable/headernav.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-    });
-    </script> 
+        <!-- to open side nav -->
+        <div class="menu-button" onclick="openNav()">
+            <div class="menu-b1"></div>
+            <div class="menu-b2"></div>
+            <div class="menu-b3"></div>
+        </div>
+    
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            }
+    
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
 
-    <h1>Contact Me</h1> 
+        <body>   
+            <h1>Contact Me</h1> 
 
-    <!-- inserting social media logos -->
-    <div id="logo-container">
-        <a href = "https://www.github.com/wemi99/" target = "_self">
-            <img id="github" src="/media/github-logo.png" alt="github">
-        </a>
+            <!-- inserting social media logos -->
+            <div id="logo-container">
+                <div class="child bounce">
+                    <a href = "https://www.github.com/wemi99/" target=_blank>
+                        <img id="github" src="/media/github-logo.png" alt="github">
+                    </a>
+                </div>
 
-        <a href = "https://www.instagram.com/black.girl.codes/" target = "_self">
-            <img id="instagram" src="/media/instagram-logo.png" alt="instagram">
-        </a>
+                <div class="child bounce">
+                    <a href = "https://www.instagram.com/black.girl.codes/" target=_blank>
+                        <img id="instagram" src="/media/instagram-logo.png" alt="instagram">
+                    </a>    
+                </div>
+                
+                <div class="child bounce">
+                    <a href = "https://www.linkedin.com/in/wemi-oshun-williams-a15a8b192/" target=_blank>
+                        <img id="linkedin" src="/media/linkedin-logo.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
 
-        <a href = "https://www.linkedin.com/in/wemi-oshun-williams-a15a8b192/" target = "_self">
-            <img id="linkedin" src="/media/linkedin-logo.png" alt="linkedin">
-        </a>
-    </div>
+            <!-- contact text boxes -->
+            <div class="contact-container">
 
-    <!-- contact text boxes -->
-    <div class="contact-container">
+                <!-- <form action="action_page.php"></form> -->
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <label for="first-name" class="heading-text-formatting">Name</label>
+                    <input type="text" id="first-name" name="firstname" placeholder="Your name...">
 
-        <!-- <form action="action_page.php"></form> -->
+                    <label for="email" class="heading-text-formatting">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Your email...">
 
-        <label for="first-name">Name</label>
-        <input type="text" id="first-name" name="firstname" placeholder="Your name...">
+                    <label for="subject" class="heading-text-formatting">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Your subject...">
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email...">
+                    <label for="message" class="heading-text-formatting">Message</label>
+                    <textarea id="message" name="message" placeholder="Hello..." style="height:200px"></textarea>
+                    
+                    <button type="submit" class="button-56">Send</button>
+                
+                </form>
+            </div>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Your subject...">
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        Host: "smtp.gmail.com",
+                        Username: "wemicodes@gmail.com",
+                        Password: "WemiCodes2@22",
+                        To: 'wemicodes@gmail.com',
+                        From: document.getElementById("email").value,
+                        Subject: "Portfolio Website - " + document.getElementById("subject").value,
+                        Body: "Name: " + document.getElementById("first-name").value
+                            + "<br> Message: " + document.getElementById("message").value
+                    }).then(
+                        message => alert("Message sent successfully!")
+                    );
+                }
+            </script>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Hello..." style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-
-    </div>
-
+    </body>
 
     <!-- footer -->
     <div id="footer-placeholder"></div>
